@@ -25,5 +25,5 @@ repos:
   hooks:
     - id: flake8
       name: flake8
-      entry: poetry run flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics apps config
+      entry: flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics apps config
       language: python
