@@ -8,6 +8,7 @@ license = "GNU GPL V3.0"
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^3.2"
+psycopg2 = "^2.9.4"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.20.0"
