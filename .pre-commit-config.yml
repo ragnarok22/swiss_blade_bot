@@ -1,0 +1,29 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.3.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-yaml
+  - id: check-added-large-files
+  - id: mixed-line-ending
+    args: ['--fix=lf']
+
+- repo: https://github.com/PyCQA/isort
+  rev: 5.10.1
+  hooks:
+  - id: isort
+    args: ['--multi-line=3', '--trailing-comma', '--force-grid-wrap=0', '--use-parentheses', '--line-width=88']
+
+- repo: https://github.com/humitos/mirrors-autoflake.git
+  rev: v1.1
+  hooks:
+  - id: autoflake
+    args: ['--in-place', '--remove-all-unused-imports']
+
+- repo: local
+  hooks:
+    - id: flake8
+      name: flake8
+      entry: poetry run flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics apps config
+      language: python
