@@ -2,6 +2,7 @@
 Swiss Blade for Telegram
 
 ![Django CI](https://github.com/ragnarok22/swiss_blade_bot/actions/workflows/django-test.yml/badge.svg)
+![CodeQL](https://github.com/ragnarok22/swiss_blade_bot/actions/workflows/codeql.yml/badge.svg)
 
 License
 -------
